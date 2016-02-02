@@ -24,7 +24,7 @@ double OI::getDriverJoystickZ()
 
 double OI::getCopilotThrottle()
 {
-	return copilot_joystick->GetZ();
+	return copilot_joystick->GetRawAxis(2);
 }
 
 double OI::getCopilotJoystickY()
@@ -32,7 +32,17 @@ double OI::getCopilotJoystickY()
 	return copilot_joystick->GetY();
 }
 
+bool OI::getCopilotTrigger()
+{
+	return copilot_joystick->GetTrigger();
+}
+
 bool OI::getDriverJoystickButton(int i)
 {
 	return driver_joystick->GetRawButton(i);
+}
+
+bool OI::getCopilotJoystickButton(int button)
+{
+	return copilot_joystick->GetRawButton(button);
 }

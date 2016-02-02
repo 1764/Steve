@@ -14,7 +14,7 @@ void Riser::SetSpeed(double speed)
 {
 	back_top_riser->SetSpeed(-speed);
 	back_bottom_riser->SetSpeed(-speed);
-	front_riser->SetSpeed(speed);
+	front_riser->SetSpeed(-speed);
 }
 
 void Riser::InitDefaultCommand()

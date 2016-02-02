@@ -6,6 +6,7 @@
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/Riser.h"
 #include "Subsystems/Shooter.h"
+#include "Subsystems/Spindle.h"
 #include "OI.h"
 #include "WPILib.h"
 
@@ -25,6 +26,7 @@ public:
 	static DriveTrain *drive_train;
 	static Riser *riser;
 	static Shooter *shooter;
+	static Spindle *spindle;
 };
 
 #endif

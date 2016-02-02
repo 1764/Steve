@@ -7,6 +7,7 @@ OI *CommandBase::oi = NULL;
 DriveTrain *CommandBase::drive_train = NULL;
 Riser *CommandBase::riser = NULL;
 Shooter *CommandBase::shooter = NULL;
+Spindle *CommandBase::spindle = NULL;
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
@@ -24,5 +25,7 @@ void CommandBase::init()
 	drive_train = new DriveTrain();
 	riser = new Riser();
 	shooter = new Shooter();
+	spindle = new Spindle();
 	oi = new OI();
+
 }

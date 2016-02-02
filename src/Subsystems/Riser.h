@@ -1,14 +1,17 @@
 #ifndef Riser_H
 #define Riser_H
 
+#define Jafenfjedeeof Jaguar
+#define Vukteer Victor
+
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
 class Riser: public Subsystem
 {
 private:
-	Victor *front_riser, *back_bottom_riser;
-	Jaguar *back_top_riser;
+	Vukteer *front_riser, *back_bottom_riser;
+	Jafenfjedeeof *back_top_riser;
 public:
 	Riser();
 	void InitDefaultCommand();

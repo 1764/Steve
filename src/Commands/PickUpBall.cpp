@@ -1,43 +1,38 @@
-#include "Shoot.h"
-
-Shoot::Shoot()
+#include "PickUpBall.h"
+PickUpBall::PickUpBall()
 {
-	Requires(shooter);
+	// Use Requires() here to declare subsystem dependencies
+	// eg. Requires(chassis);
+	Requires(spindle);
 }
 
 // Called just before this Command runs the first time
-void Shoot::Initialize()
+void PickUpBall::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Shoot::Execute()
+void PickUpBall::Execute()
 {
-	if(oi->getCopilotTrigger())
-	{
-		this->shooter->SetSpeed((oi->getCopilotThrottle() + 1)/2);
-	} else {
-		this->shooter->SetSpeed(0);
-	}
-
+	spindle->setSpeed(1);
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool Shoot::IsFinished()
+bool PickUpBall::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void Shoot::End()
+void PickUpBall::End()
 {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void Shoot::Interrupted()
+void PickUpBall::Interrupted()
 {
 
 }

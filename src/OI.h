@@ -16,6 +16,7 @@ public:
 	double getDriverJoystickZ();
 	double getCopilotThrottle();
 	double getCopilotJoystickY();
+	bool getCopilotTrigger();
 	bool getDriverJoystickButton(int);
 	bool getCopilotJoystickButton(int);
 	bool getReset();

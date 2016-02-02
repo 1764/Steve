@@ -12,7 +12,7 @@ Shooter::Shooter() :
 void Shooter::SetSpeed(double speed)
 {
 	this->lower_shooter->SetSpeed(speed);
-	this->upper_shooter->SetSpeed(speed);
+	this->upper_shooter->SetSpeed(-speed);
 }
 
 void Shooter::InitDefaultCommand()
